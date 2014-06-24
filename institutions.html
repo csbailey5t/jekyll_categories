@@ -1,0 +1,56 @@
+---
+layout: page
+title: Institutions
+---
+
+      <nav>
+        <a href="#" id="all_btn">All Institutions</a>
+        <a href="#" id="undergrad_btn">Undergraduate Institutions</a>
+        <a href="#" id="grad_btn">Graduate Institutions</a>
+        <a href="#" id="other_btn">Other Institutions</a>
+
+      </nav>
+
+      <div id="institutions">
+        <h1>Institutions</h1>
+        <ul class="posts">
+          {% for post in site.categories['institution'] %}
+          <li>
+            <a class='post-link' href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div id="other">
+        <h2>Tag loop - other</h2>
+        <ul class="posts">
+          {% for post in site.tags['other'] %}
+          <li>
+            <a class='post-link' href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div id="grad">
+        <h2>Tag loop - grad</h2>
+        <ul class="posts">
+          {% for post in site.tags['grad'] %}
+          <li>
+            <a class='post-link' href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div id="undergrad">
+        <h2>Tag loop - undergrad</h2>
+        <ul class="posts">
+          {% for post in site.tags['undergrad'] %}
+          <li>
+            <a class='post-link' href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
